@@ -1,3 +1,5 @@
+# Exceptions
+
 class DepositeError(Exception):pass
 
 class InsufficientBalanceError(Exception):pass
