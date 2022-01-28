@@ -1,6 +1,6 @@
 from exceptions import InsufficientBalanceError,WithdrawError
 import mysql.connector
-con = mysql.connector.connect(host="localhost", user="root", passwd="ironman", database="nareshit")
+con = mysql.connector.connect(host="localhost", user="root", passwd="root", database="nareshit")
 cur = con.cursor()
 
 def withdraw():
