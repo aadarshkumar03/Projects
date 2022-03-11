@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock%}
+
+{% block body %}
+<h1>Home Page</h1>
+<br>
+
+<div class="text-white bg-dark p-5 rounded">
+        <div class="col-sm-8 mx-auto">
+          <h1>Welcome!</h1>
+          <p>I am Jadhav Aadarshkumar Madhukar. I have created this blog website using Flask Microframework of Python. In this blog, We are able to create new Blog posts. If we have any mistake in blog which we are created then we able to "Edit" that blog as well as if we have any problem with that blog post then we also able to "Delete" that Blog post from the posts.</p>
+            <br>
+          <p><a class="btn btn-success" href="{{ url_for('posts') }}" role="button">View Posts &raquo;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Posts{% endblock %}
+{% block body %}
+<br>
+<div style="display: flex; justify-content: space-between;">
+  <h1>All Created Posts</h1>
+  <a class="btn btn-primary btn-lg" href="{{ url_for('new_post') }}">+Add Post</a>
+</div>
+<hr>
+{% for i in data %}
+        <h2>{{ i.title }}</h2>
+        {% if i.author %}
+            <small>Author:{{ i.author }} on {{ i.dt }}</small>
+        {% else %}
+            <small>Author:Unknown on {{ i.dt }}</small>
+        {% endif %}
+        <br><br>
+        <p style="white-space:pre-wrap">{{ i.posts }}</p>
+        <a class="btn btn-danger" href="/posts/delete/{{ i.id }}">Delete</a>
+        <a class="btn btn-warning" href="/posts/edit/{{ i.id }}">Edit</a>
+        <hr>
+{% endfor %}
+{% endblock %}

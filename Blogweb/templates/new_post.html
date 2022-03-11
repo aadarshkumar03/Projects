@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Add Post {% endblock%}
+
+{% block body %}
+<h1> Create a New Blog Post:</h1>
+<hr>
+<form action="/new_post" method="post">
+    <!--    Title Here -->
+    <label for="title">Title:</label>
+    <input type="text" class="form-control" placeholder="Enter title here" name="title" id="title">
+    <br>
+    <!--    Author Here-->
+    <label for="author">Author:</label>
+    <input type="text" class="form-control" placeholder="Enter author here" name="author" id="author">
+    <br>
+    <!--    Post Here-->
+    <label for="posts">Post Content:</label>
+        <textarea class="form-control" id="posts" name="posts" rows="3" placeholder="Enter description about post here"></textarea>
+    <br>
+    <input class="btn btn-success" type="submit" value="ADD POST">
+    <a class="btn btn-secondary" href="{{ url_for('posts') }}">Go Back</a>
+    <a class="btn btn-primary" type="Reset" href="{{ url_for('new_post') }}">Reset</a>
+</form>
+{% endblock %}
